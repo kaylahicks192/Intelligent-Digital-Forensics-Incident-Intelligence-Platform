@@ -6,7 +6,7 @@ Cybersecurity app/website in the works. I created this project to show off, deve
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFC5D3,50:E8A0BF,100:BDB2FF&height=180&section=header&text=TraceFlow&fontSize=65&fontColor=493443&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFC5D3,50:E8A0BF,100:BDB2FF&height=180&section=header&text=Defend_With_Confidence.&fontSize=65&fontColor=493443&animation=fadeIn" width="100%"/>
 
 <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="180" alt="Coding cat"/>
 
@@ -14,25 +14,10 @@ Cybersecurity app/website in the works. I created this project to show off, deve
 
 <i>Every byte leaves a trace. A Digital Project by Kayla Alexis Hicks <3 </i>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FFC5D3,50:E8A0BF,100:BDB2FF&height=220&section=header&text=Intelligent-Digital-Forensics-Intelligence-Platform&fontSize=65&fontColor=493443&animation=fadeIn&fontAlignY=36&desc=Digital%20Forensics%20%26%20Incident%20Intelligence&descAlignY=56&descSize=16"/>
-
-<p align="center">
-  <img src="https://api.iconify.design/lucide/fingerprint.svg?color=%23FF85B3" width="45"/>
-  &nbsp;&nbsp;
-  <img src="https://api.iconify.design/lucide/shield-check.svg?color=%23BDB2FF" width="45"/>
-  &nbsp;&nbsp;
-  <img src="https://api.iconify.design/lucide/lock-keyhole.svg?color=%23FF85B3" width="45"/>
   &nbsp;&nbsp;
   <img src="https://api.iconify.design/lucide/file-search.svg?color=%23BDB2FF" width="45"/>
 </p>
 
-<h3 align="center">
-  ୨୧ Intelligent Digital Forensics & Incident Intelligence Platform ୨୧
-</h3>
-
-<p align="center">
-  <i>Every byte leaves a trace.</i>
-</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-FFC5D3?style=for-the-badge&logo=python&logoColor=493443"/>
@@ -61,21 +46,26 @@ Cybersecurity app/website in the works. I created this project to show off, deve
 
 ---
 
-## 01. About TraceFlow
+## 01. About this Project
 
 <img align="right" src="https://images.pexels.com/photos/9128858/pexels-photo-9128858.jpeg?auto=compress&cs=tinysrgb&w=600" width="220" alt="Pink and purple illuminated keyboard"/>
 
-TraceFlow is a Python-based digital forensics and incident
-intelligence application designed to simplify investigative
-workflows through automated incident prioritization,
-cryptographic hashing, and evidence integrity verification.
+This project is Python-based, fully developed within my own Host PC. Here are the materials I have used/will use. 
+VS CODE
+PYTHON
+PowerShell
+SHA-256 
+Streamlit
+SQLite
 
 The project combines cybersecurity fundamentals with
-practical software engineering to explore how technology
-can improve the efficiency of digital investigations.
+practical software engineering to do the following:
+- Demonstrate an intermediate-level understanding of coding with Python
+- Add a level of creativity to Cybersecurity projects
+  
 
-My long-term goal is to establish my own digital forensics
-company. TraceFlow represents the beginning of my journey
+One of my many long-term goals is to establish my own digital forensics
+company. This represents the beginning of my journey
 toward developing independent cybersecurity software.
 
 **Mission:** Investigate intelligently. Preserve evidence.
@@ -103,9 +93,11 @@ Follow the trace.
 
 ## 03. Technical Architecture
 
-TraceFlow follows a modular software architecture designed
+This project follows a modular software architecture designed
 to separate application logic, user interaction, and
 persistent data storage.
+
+Here are the directories within my file:
 
 ```text
 TraceFlow/
@@ -132,7 +124,7 @@ TraceFlow/
 
 ```mermaid
 flowchart TD
-    A[Investigator Input] --> B[TraceFlow Engine]
+    A[Investigator Input] --> B[Engine]
     B --> C[Incident Prioritization]
     B --> D[Risk Classification]
     B --> E[SHA-256 Hash Generation]
@@ -162,15 +154,18 @@ The algorithm evaluates three analyst-provided factors.
 | Urgency | Time sensitivity of the investigation | 30% |
 | Impact | Potential organizational consequences | 20% |
 
+Each security incident/event has a rating from 1-5. One not being a big threat, something a company has the ability and resources to mitigate. 
+
+Five = Needs attention immediately. 
+
 ### Weighted Scoring Model
 
 $$
 P = (S \times 10) + (U \times 6) + (I \times 4)
 $$
 
-Each factor is assigned a numerical value between 1 and 5.
 
-### Python Implementation
+##HERE IS HOW IT LOOKS IN PYTHON
 
 ```python
 def calculate_priority(severity, urgency, impact):
@@ -187,24 +182,18 @@ def calculate_priority(severity, urgency, impact):
 | 40 - 59 | ![Medium](https://img.shields.io/badge/Medium-C8A2C8?style=flat-square) |
 | 20 - 39 | ![Low](https://img.shields.io/badge/Low-B5C9A8?style=flat-square) |
 
-This scoring model is an educational implementation
-and is not an official industry risk scoring standard.
+DISCLAIMER: This scoring model is an educational implementation. I made this scoring system up for demonstration purposes. 
 
 ---
 
 ## 05. Cryptographic Evidence Analysis
 
-<img align="right" src="https://api.iconify.design/lucide/fingerprint.svg?color=%23FF85B3" width="100"/>
-
-TraceFlow utilizes SHA-256 cryptographic hashing to
-generate unique-looking digital fingerprints of supplied
-binary data.
+This application utilizes SHA-256 cryptographic hashing to
+generate unique-looking digital fingerprints while producing a layer of integrity. 
 
 SHA-256 produces a 256-bit digest represented by
 64 hexadecimal characters.
 
-This functionality supports digital evidence integrity,
-one of the foundational principles of digital forensics.
 
 ### Hash Generation
 
@@ -226,7 +215,7 @@ def verify_integrity(original_hash, current_hash):
         return False
 ```
 
-### Technical Concepts
+### Technical Concepts so far:
 
 - Cryptographic hashing
 - SHA-256
@@ -234,260 +223,5 @@ def verify_integrity(original_hash, current_hash):
 - Binary data processing
 - Hexadecimal representation
 - Deterministic algorithms
-- Avalanche effect
-- Boolean logic
 
-Matching hashes support integrity verification when
-the original reference hash is trustworthy.
-
----
-
-## 06. Experimental Validation
-
-### Experiment I — Incident Prioritization
-
-Input:
-
-```python
-calculate_priority(4, 5, 3)
-```
-
-Expected output:
-
-```text
-Priority Score: 82/100
-Classification: Critical
-```
-
-### Experiment II — Cryptographic Hashing
-
-Original data:
-
-```text
-Hello
-```
-
-Original SHA-256:
-
-```text
-185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969
-```
-
-Modified data:
-
-```text
-hello
-```
-
-Modified SHA-256:
-
-```text
-2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
-```
-
-Changing one character produces a substantially different
-cryptographic digest, demonstrating the avalanche effect.
-
-### Experiment III — Evidence Integrity
-
-| Test Scenario | Expected Result |
-|---|---|
-| Original data compared against itself | True |
-| Original data compared against modified data | False |
-
-Actual experimental screenshots and test results will
-be added throughout development.
-
-<details>
-<summary>୨୧ View Backend Source Code</summary>
-
-<br/>
-
-The complete intelligence engine is available in
-<a href="engine.py">engine.py</a>.
-
-</details>
-
----
-
-## 07. Getting Started
-
-### Development Environment
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-F7C5CC?style=for-the-badge&logo=python&logoColor=493443"/>
-  <img src="https://img.shields.io/badge/PowerShell-BDB2FF?style=for-the-badge&logo=powershell&logoColor=493443"/>
-  <img src="https://img.shields.io/badge/Git-E8A0BF?style=for-the-badge&logo=git&logoColor=493443"/>
-  <img src="https://img.shields.io/badge/GitHub-F4B8D0?style=for-the-badge&logo=github&logoColor=493443"/>
-</p>
-
-Download or clone this repository and open the project
-directory in Visual Studio Code.
-
-Create a Python virtual environment:
-
-```powershell
-py -m venv .venv
-```
-
-Execute the backend demonstration:
-
-```powershell
-.\.venv\Scripts\python.exe engine.py
-```
-
-The current intelligence engine utilizes Python's standard
-library and does not require external dependencies.
-
----
-
-## 08. Technical Skills & Learning Objectives
-
-<table>
-<tr>
-<td valign="top" width="50%">
-
-### ♡ Programming
-
-- Python development
-- Modular programming
-- Function-based architecture
-- Conditional logic
-- Boolean operations
-- Algorithm development
-- Debugging
-- Dependency isolation
-
-</td>
-<td valign="top" width="50%">
-
-### ♡ Cybersecurity
-
-- Digital forensics
-- Incident triage
-- Risk prioritization
-- Cryptographic hashing
-- Evidence integrity
-- Binary data analysis
-- Secure development principles
-- Technical documentation
-
-</td>
-</tr>
-</table>
-
----
-
-## 09. Development Roadmap
-
-TraceFlow is being developed incrementally to establish
-a strong foundation in cybersecurity engineering and
-independent software development.
-
-### Phase I — Intelligence Engine
-
-- [x] Development environment configuration
-- [x] Python virtual environment
-- [x] Incident prioritization algorithm
-- [x] Automated risk classification
-- [x] SHA-256 hashing engine
-- [x] Evidence integrity comparison
-- [ ] Complete experimental validation
-
-### Phase II — Application Development
-
-- [ ] Interactive Streamlit dashboard
-- [ ] Custom feminine cybersecurity interface
-- [ ] SQLite database integration
-- [ ] Investigation registration
-- [ ] Evidence metadata registration
-- [ ] Investigation timeline
-
-### Phase III — Forensic Intelligence
-
-- [ ] Simulated chain-of-custody management
-- [ ] Automated forensic report generation
-- [ ] Comprehensive unit testing
-- [ ] Secure storage research
-- [ ] Authentication research
-- [ ] Application security assessment
-
----
-
-## 10. Project Limitations
-
-TraceFlow is an educational digital forensics prototype
-currently under active development.
-
-It is not intended for production forensic investigations,
-legally sensitive evidence, or real client data.
-
-Future development will explore stronger input validation,
-authentication, encrypted storage, and tamper-resistant
-audit logging.
-
----
-
-## 11. Documentation & Resources
-
-| Resource | Purpose |
-|---|---|
-| [Python Documentation](https://docs.python.org/3/) | Python programming |
-| [Hashlib Documentation](https://docs.python.org/3/library/hashlib.html) | Cryptographic hashing |
-| [SQLite Documentation](https://www.sqlite.org/docs.html) | Database development |
-| [Streamlit Documentation](https://docs.streamlit.io/) | Application interface |
-| [NIST](https://www.nist.gov/) | Cybersecurity and forensic guidance |
-
----
-
-## 12. About the Developer
-
-<p align="center">
-  <img src="https://api.iconify.design/lucide/fingerprint.svg?color=%23E8A0BF" width="65"/>
-</p>
-
-<h3 align="center">Kayla Hicks</h3>
-
-<p align="center">
-  Cybersecurity Student • Morgan State University
-  <br/>
-  Clara I. Adams Honors College
-  <br/>
-  Aspiring Digital Forensics Professional
-</p>
-
-I am passionate about digital forensics, incident response,
-cybersecurity engineering, and developing technology
-that solves meaningful problems.
-
-TraceFlow reflects my interest in combining investigative
-methodologies with software development and my aspiration
-to establish an independent digital forensics company.
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Digital_Forensics-FFC5D3?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Incident_Response-BDB2FF?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Software_Engineering-E8A0BF?style=flat-square"/>
-</p>
-
-<p align="center">
-  ⊹ ─────────────── ୨୧ ─────────────── ⊹
-</p>
-
-<p align="center">
-  <sub>Decorative photography by
-  <a href="https://www.pexels.com/photo/a-computer-keyboard-on-a-rough-surface-9128858/">Matheus Bertelli — Pexels</a>.
-  </sub>
-</p>
-
-<p align="center">
-  <i>Designed with intention. Developed with curiosity.
-  Secured through code.</i>
-</p>
-
-<p align="center">
-  ₊˚⊹♡ Every byte leaves a trace. ♡⊹˚₊
-</p>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FFC5D3,50:E8A0BF,100:BDB2FF&height=110&section=footer"/>
 
